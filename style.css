@@ -87,6 +87,7 @@ h3.section__text {
 	font-weight: bold;
 	padding: 10px 20px;
 	background-color: #5F3723;
+	background: linear-gradient(to right, #f3e2c7 0%, #b68d4c 0%, #5f3723 100%);
 }
 .footer__text {
 	margin-top: 70px;
