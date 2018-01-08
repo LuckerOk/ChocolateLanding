@@ -9,7 +9,7 @@ body
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.75)
   &__nav
     display: flex
-    flex-flow: row nowrap
+    flex-flow: row wrap
     justify-content: flex-end
     margin: 20px
     padding: 0 15px 0 0
@@ -33,6 +33,7 @@ body
 
 .section
   display: flex
+  flex-flow: row wrap
   justify-content: space-around
   align-items: center
   color: #5F3723
@@ -61,11 +62,12 @@ h3.section__text
 .section
   &__team
     display: flex
+    flex-flow: row wrap
     justify-content: space-around
     color: #5F3723
   &__benefit
     display: flex
-    flex-flow: column nowrap
+    flex-flow: column wrap
     align-items: center
     padding: 110px 0
 
@@ -84,7 +86,7 @@ h3.section__text
 
 .footer
   display: flex
-  flex-flow: row nowrap
+  flex-flow: row wrap
   justify-content: space-between
   align-items: center
   height: 170px
@@ -105,3 +107,29 @@ h3.section__text
     font-size: 18px
     letter-spacing: .2px
     color: #fff
+
+@media (max-width: 979px)
+  .header__nav
+    margin-right: 0
+    flex-direction: column
+  .nav__item
+    margin-right: 0
+  .section
+    flex-direction: column
+    text-align: center
+    &__image
+      width: 100%
+    &__about
+      height: 300px
+    &__benefit
+      padding: 30px 0
+  h2.section__text
+    font-size: 1.5em
+  h3.section__text
+    font-size: 1.17em
+    margin-left: 10px
+  .footer
+    flex-flow: column-reverse nowrap
+    align-items: flex-start
+  .menu__ul
+    padding: 0
