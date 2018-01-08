@@ -7,16 +7,19 @@ body {
   padding: 26px 0;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.75); }
   .header__nav {
-    float: right;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
     margin: 20px;
     padding: 0 15px 0 0; }
 
-.container {
-  padding: 0 20px; }
+.flex-container {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; }
 
 .nav__item {
-  float: right;
-  margin-right: 49px;
+  margin-right: 50px;
   list-style-type: none; }
 .nav__link {
   font-weight: bold;
@@ -26,31 +29,41 @@ body {
   color: #5F3723; }
 
 .section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   color: #5F3723;
-  font-size: 18px;
-  padding: 70px 20px;
-  margin: 70px 0; }
-  .section__left {
-    float: left;
-    display: inline-block; }
+  font-size: 18px; }
   .section__right {
-    margin-left: 70px;
-    display: inline-block; }
+    margin: 70px 0; }
   .section__about {
     color: #fff;
     background: url("./images/back.jpg") no-repeat;
       background-size: cover;
     height: 500px; }
+  .section__content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    height: 100%; }
 
 h2.section__text {
-  font-size: 38px;
-  text-align: right;
-  padding: 130px; }
+  align-self: center;
+  font-size: 38px; }
 
 h3.section__text {
-  font-size: 28px;
-  text-align: left;
-  padding: 90px; }
+  align-self: flex-end;
+  font-size: 28px; }
+
+.section__team {
+  display: flex;
+  justify-content: space-around;
+  color: #5F3723; }
+.section__benefit {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 110px 0; }
 
 .team__image {
   width: 200px;
@@ -63,28 +76,19 @@ h3.section__text {
   font-weight: bold;
   font-size: 28px; }
 
-.section__team {
-  color: #5F3723;
-  width: 100%; }
-.section__benefit {
-  text-align: center;
-  padding: 110px 0;
-  width: 33%;
-  display: inline-block; }
-
 .footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   height: 170px;
   font-weight: bold;
   padding: 10px 20px;
   background: #5F3723 linear-gradient(to right, #f3e2c7 0%, #b68d4c 0%, #5f3723 100%); }
   .footer__text {
-    margin-top: 70px;
-    float: left;
     color: #fff; }
 
 .menu__ul {
-  margin-top: 10px;
-  float: right;
   padding-right: 46px; }
 .menu__item {
   margin: 20px 0;

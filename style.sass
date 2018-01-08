@@ -8,17 +8,20 @@ body
   padding: 26px 0
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.75)
   &__nav
-    float: right
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-end
     margin: 20px
     padding: 0 15px 0 0
 
-.container
+.flex-container
   padding: 0 20px
+  display: flex
+  justify-content: space-between
 
 .nav
   &__item
-    float: right
-    margin-right: 49px
+    margin-right: 50px
     list-style-type: none
   &__link
     font:
@@ -29,31 +32,42 @@ body
     color: #5F3723
 
 .section
+  display: flex
+  justify-content: space-around
+  align-items: center
   color: #5F3723
   font-size: 18px
-  padding: 70px 20px
-  margin: 70px 0
-  &__left
-    float: left
-    display: inline-block
   &__right
-    margin-left: 70px
-    display: inline-block
+    margin: 70px 0
   &__about
     color: #fff
     background: url("./images/back.jpg") no-repeat
       size: cover
     height: 500px
+  &__content
+    display: flex
+    justify-content: space-around
+    flex-direction: row-reverse
+    height: 100%
 
 h2.section__text
+  align-self: center
   font-size: 38px
-  text-align: right
-  padding: 130px
 
 h3.section__text
+  align-self: flex-end
   font-size: 28px
-  text-align: left
-  padding: 90px
+
+.section
+  &__team
+    display: flex
+    justify-content: space-around
+    color: #5F3723
+  &__benefit
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+    padding: 110px 0
 
 .team
   &__image
@@ -68,30 +82,20 @@ h3.section__text
       weight: bold
       size: 28px
 
-.section
-  &__team
-    color: #5F3723
-    width: 100%
-  &__benefit
-    text-align: center
-    padding: 110px 0
-    width: 33%
-    display: inline-block
-
 .footer
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
   height: 170px
   font-weight: bold
   padding: 10px 20px
   background: #5F3723 linear-gradient(to right, #f3e2c7 0%, #b68d4c 0%, #5f3723 100%)
   &__text
-    margin-top: 70px
-    float: left
     color: #fff
 
 .menu
   &__ul
-    margin-top: 10px
-    float: right
     padding-right: 46px
   &__item
     margin: 20px 0
